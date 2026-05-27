@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simran Kaur — Legal Operations & Contracts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #12203a;
+    --navy-mid: #1e3356;
+    --navy-light: #2c4a7a;
+    --gold: #c9a84c;
+    --gold-light: #e8d08a;
+    --cream: #f8f5ef;
+    --cream-dark: #ede8de;
+    --white: #ffffff;
+    --text-dark: #12203a;
+    --text-mid: #3d5278;
+    --text-muted: #7a8fa8;
+    --border: rgba(18,32,58,0.12);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    color: var(--text-dark);
+    background: var(--cream);
+    line-height: 1.7;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(18,32,58,0.96);
+    backdrop-filter: blur(8px);
+    padding: 0 4rem;
+    height: 60px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--gold);
+    letter-spacing: 0.04em;
+    text-decoration: none;
+  }
+
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold-light); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    background: var(--navy);
+    display: flex; flex-direction: column;
+    justify-content: center;
+    padding: 8rem 4rem 6rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -20%; right: -10%;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    border: 1px solid rgba(201,168,76,0.08);
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -30%; left: -5%;
+    width: 800px; height: 800px;
+    border-radius: 50%;
+    border: 1px solid rgba(201,168,76,0.05);
+  }
+
+  .hero-eyebrow {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(52px, 7vw, 88px);
+    font-weight: 300;
+    line-height: 1.05;
+    color: var(--white);
+    margin-bottom: 0.3em;
+    position: relative; z-index: 1;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  .hero-tagline {
+    font-size: clamp(15px, 1.8vw, 18px);
+    color: rgba(255,255,255,0.55);
+    font-weight: 300;
+    max-width: 580px;
+    margin-bottom: 3rem;
+    line-height: 1.8;
+    position: relative; z-index: 1;
+  }
+
+  .hero-cta {
+    display: flex; gap: 1rem; flex-wrap: wrap;
+    position: relative; z-index: 1;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--navy);
+    padding: 12px 28px;
+    border-radius: 2px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    transition: background 0.2s;
+  }
+  .btn-primary:hover { background: var(--gold-light); }
+
+  .btn-outline {
+    border: 1px solid rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.8);
+    padding: 12px 28px;
+    border-radius: 2px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+  .hero-stats {
+    display: flex; gap: 3.5rem;
+    margin-top: 5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    position: relative; z-index: 1;
+  }
+
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 12px;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  /* SECTIONS */
+  section { padding: 6rem 4rem; }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--text-dark);
+    margin-bottom: 2rem;
+  }
+
+  .section-title em {
+    font-style: italic;
+    color: var(--navy-light);
+  }
+
+  /* ABOUT */
+  #about { background: var(--white); }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+    margin-top: 1rem;
+  }
+
+  .about-text p {
+    font-size: 16px;
+    line-height: 1.9;
+    color: var(--text-mid);
+    margin-bottom: 1.25rem;
+  }
+
+  .about-highlight {
+    border-left: 2px solid var(--gold);
+    padding-left: 1.25rem;
+    margin: 2rem 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--navy);
+  }
+
+  .credential-list { list-style: none; }
+  .credential-list li {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+    color: var(--text-mid);
+  }
+  .credential-list li:last-child { border-bottom: none; }
+  .cred-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+    margin-top: 7px; flex-shrink: 0;
+  }
+  .cred-main { font-weight: 400; color: var(--text-dark); }
+  .cred-sub { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+
+  /* EXPERTISE */
+  #expertise { background: var(--cream); }
+
+  .expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    margin-top: 2rem;
+  }
+
+  .expertise-card {
+    background: var(--white);
+    padding: 2rem 1.75rem;
+  }
+
+  .expertise-icon {
+    font-size: 22px;
+    margin-bottom: 1rem;
+    color: var(--gold);
+  }
+
+  .expertise-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    font-weight: 400;
+    color: var(--navy);
+    margin-bottom: 0.75rem;
+  }
+
+  .expertise-desc {
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--text-muted);
+  }
+
+  /* TOOLKIT */
+  #toolkit { background: var(--navy); }
+  #toolkit .section-title { color: var(--white); }
+
+  .toolkit-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.08);
+    margin-top: 2.5rem;
+  }
+
+  .tool-card {
+    background: rgba(255,255,255,0.03);
+    padding: 1.5rem 1.25rem;
+    transition: background 0.2s;
+  }
+  .tool-card:hover { background: rgba(201,168,76,0.08); }
+
+  .tool-category {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+  }
+
+  .tool-names {
+    font-size: 13px;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.9;
+  }
+
+  .tool-names span {
+    display: block;
+    font-weight: 400;
+    color: rgba(255,255,255,0.85);
+  }
+
+  /* EXPERIENCE */
+  #experience { background: var(--white); }
+
+  .exp-timeline { margin-top: 1rem; }
+
+  .exp-entry {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 2.5rem;
+    padding: 2.5rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .exp-entry:last-child { border-bottom: none; }
+
+  .exp-date {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    padding-top: 3px;
+  }
+
+  .exp-org {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--navy);
+    margin-bottom: 2px;
+  }
+
+  .exp-role {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+  }
+
+  .exp-desc {
+    font-size: 14px;
+    line-height: 1.85;
+    color: var(--text-mid);
+  }
+
+  .exp-tags {
+    display: flex; flex-wrap: wrap; gap: 6px;
+    margin-top: 0.75rem;
+  }
+
+  .tag {
+    font-size: 11px;
+    padding: 3px 10px;
+    border: 1px solid var(--border);
+    border-radius: 1px;
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+  }
+
+  /* WORK SAMPLES */
+  #samples { background: var(--cream); }
+
+  .samples-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5px;
+    background: var(--border);
+    margin-top: 2rem;
+  }
+
+  .sample-card {
+    background: var(--white);
+    padding: 2.25rem 2rem;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .sample-card:hover { background: #fdfcfa; }
+
+  .sample-type {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.6rem;
+  }
+
+  .sample-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--navy);
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+  }
+
+  .sample-desc {
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+  }
+
+  .sample-meta {
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  /* CASE STUDIES */
+  #cases { background: var(--navy); }
+  #cases .section-title { color: var(--white); }
+  #cases .section-label { color: var(--gold); }
+
+  .cases-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: rgba(255,255,255,0.08);
+    margin-top: 2rem;
+  }
+
+  .case-card {
+    background: rgba(255,255,255,0.03);
+    padding: 2.5rem 2rem;
+  }
+
+  .case-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 56px;
+    font-weight: 300;
+    color: rgba(201,168,76,0.2);
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  .case-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+
+  .case-body {
+    font-size: 13px;
+    line-height: 1.9;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 1.5rem;
+  }
+
+  .case-result {
+    border-top: 1px solid rgba(201,168,76,0.2);
+    padding-top: 1rem;
+    font-size: 13px;
+    color: var(--gold-light);
+  }
+
+  .case-result strong {
+    display: block;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+
+  /* EDUCATION */
+  #education { background: var(--white); }
+
+  .edu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5px;
+    background: var(--border);
+    margin-top: 2rem;
+  }
+
+  .edu-card {
+    background: var(--cream);
+    padding: 2rem 1.75rem;
+  }
+
+  .edu-degree {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--navy);
+    margin-bottom: 4px;
+    line-height: 1.3;
+  }
+
+  .edu-school {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--gold);
+    margin-bottom: 6px;
+    letter-spacing: 0.04em;
+  }
+
+  .edu-year {
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  .edu-note {
+    font-size: 12px;
+    color: var(--text-mid);
+    margin-top: 0.75rem;
+    line-height: 1.6;
+    border-top: 1px solid var(--border);
+    padding-top: 0.75rem;
+  }
+
+  /* CONTACT */
+  #contact {
+    background: var(--navy);
+    text-align: center;
+    padding: 7rem 4rem;
+  }
+
+  #contact .section-label { justify-content: center; display: block; }
+  #contact .section-title { color: var(--white); text-align: center; }
+
+  .contact-links {
+    display: flex; justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+  }
+
+  .contact-link {
+    display: flex; align-items: center; gap: 8px;
+    padding: 12px 24px;
+    border: 1px solid rgba(201,168,76,0.3);
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    transition: all 0.2s;
+    border-radius: 1px;
+  }
+  .contact-link:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+
+  /* FOOTER */
+  footer {
+    background: #0c1829;
+    padding: 1.5rem 4rem;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 11px;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 0.06em;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-up {
+    animation: fadeUp 0.7s ease forwards;
+  }
+
+  .delay-1 { animation-delay: 0.1s; opacity: 0; }
+  .delay-2 { animation-delay: 0.25s; opacity: 0; }
+  .delay-3 { animation-delay: 0.4s; opacity: 0; }
+  .delay-4 { animation-delay: 0.55s; opacity: 0; }
+  .delay-5 { animation-delay: 0.7s; opacity: 0; }
+
+  @media (max-width: 900px) {
+    nav { padding: 0 1.5rem; }
+    .nav-links { display: none; }
+    section { padding: 4rem 1.5rem; }
+    .hero { padding: 7rem 1.5rem 4rem; }
+    .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .expertise-grid { grid-template-columns: 1fr; }
+    .toolkit-grid { grid-template-columns: repeat(2, 1fr); }
+    .exp-entry { grid-template-columns: 1fr; gap: 0.5rem; }
+    .samples-grid { grid-template-columns: 1fr; }
+    .cases-grid { grid-template-columns: 1fr; }
+    .edu-grid { grid-template-columns: 1fr; }
+    .hero-stats { gap: 2rem; flex-wrap: wrap; }
+    footer { flex-direction: column; gap: 0.5rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">Simran Kaur</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#expertise">Expertise</a></li>
+    <li><a href="#toolkit">Toolkit</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#samples">Work Samples</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <p class="hero-eyebrow fade-up delay-1">Legal Operations &amp; Contracts Professional</p>
+  <h1 class="fade-up delay-2">Simran<br><em>Kaur</em></h1>
+  <p class="hero-tagline fade-up delay-3">
+    LL.M. &middot; Legal Operations &middot; Contract Management &middot; AI-Powered Legal Workflows &middot; New York City
+  </p>
+  <div class="hero-cta fade-up delay-4">
+    <a href="#experience" class="btn-primary">View Experience</a>
+    <a href="mailto:kaursimran7414@gmail.com" class="btn-outline">Get in Touch</a>
+  </div>
+  <div class="hero-stats fade-up delay-5">
+    <div>
+      <div class="stat-num">7+</div>
+      <div class="stat-label">Years Legal Experience</div>
+    </div>
+    <div>
+      <div class="stat-num">30+</div>
+      <div class="stat-label">Matters Managed</div>
+    </div>
+    <div>
+      <div class="stat-num">10+</div>
+      <div class="stat-label">AI Tools Deployed</div>
+    </div>
+    <div>
+      <div class="stat-num">4</div>
+      <div class="stat-label">Jurisdictions</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <p class="section-label">About</p>
+  <div class="about-grid">
+    <div class="about-text">
+      <h2 class="section-title">Legal professional<br>built for <em>the AI era</em></h2>
+      <p>
+        I am a New York-based legal operations and contracts professional with an LL.M. from DePaul University College of Law and a B.A., LL.B. evaluated as equivalent to a U.S. Juris Doctor by World Education Services. My work sits at the intersection of legal practice, project management, and technology — where I build systems that make legal teams faster, more consistent, and audit-ready.
+      </p>
+      <p>
+        Across roles at Thompson, Brody &amp; Kaplan LLP, the Circuit Court of Cook County, King &amp; Spalding (pro bono), and Liberty &amp; Freedom Legal Group, I have drafted and reviewed commercial agreements, deployed AI-assisted contract review tools, built document automation workflows, and managed high-volume matter portfolios from intake through execution.
+      </p>
+      <blockquote class="about-highlight">
+        "I contributed to one of the largest Special Education class action lawsuits in the nation while simultaneously building the operational infrastructure that kept the legal team running."
+      </blockquote>
+      <p>
+        I use Harvey, Claude, Kira, eBrevia, Luminance, Contract Express, and HotDocs daily — not as a talking point, but as core tools in how I get work done. My goal in every role is to leave the legal function more organized, more efficient, and better documented than I found it.
+      </p>
+    </div>
+    <div>
+      <p class="section-label" style="margin-bottom:1rem;">Credentials</p>
+      <ul class="credential-list">
+        <li>
+          <span class="cred-dot"></span>
+          <div>
+            <div class="cred-main">LL.M., U.S. Legal Studies</div>
+            <div class="cred-sub">DePaul University College of Law &middot; Dec 2024</div>
+          </div>
+        </li>
+        <li>
+          <span class="cred-dot"></span>
+          <div>
+            <div class="cred-main">B.A., LL.B. (Hons.) — WES U.S. JD Equivalent</div>
+            <div class="cred-sub">Panjab University &middot; GPA 3.62 &middot; 2020</div>
+          </div>
+        </li>
+        <li>
+          <span class="cred-dot"></span>
+          <div>
+            <div class="cred-main">MBA (In Progress)</div>
+            <div class="cred-sub">Humphreys University &middot; 2025 – Present</div>
+          </div>
+        </li>
+        <li>
+          <span class="cred-dot"></span>
+          <div>
+            <div class="cred-main">McKinsey.org Forward Program</div>
+            <div class="cred-sub">McKinsey &amp; Company &middot; Apr 2026 – Present</div>
+          </div>
+        </li>
+        <li>
+          <span class="cred-dot"></span>
+          <div>
+            <div class="cred-main">Pro Bono — King &amp; Spalding LLP</div>
+            <div class="cred-sub">Am Law 20 &middot; Aug 2022 – Oct 2024</div>
+          </div>
+        </li>
+        <li>
+          <span class="cred-dot"></span>
+          <div>
+            <div class="cred-main">New York City, NY 10028</div>
+            <div class="cred-sub">(312) 978-0142 &middot; kaursimran7414@gmail.com</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE -->
+<section id="expertise">
+  <p class="section-label">Core Expertise</p>
+  <h2 class="section-title">What I <em>do best</em></h2>
+  <div class="expertise-grid">
+    <div class="expertise-card">
+      <div class="expertise-icon">&#9670;</div>
+      <h3 class="expertise-title">Contract Operations</h3>
+      <p class="expertise-desc">End-to-end agreement lifecycle — drafting, review, redline coordination, signature logistics via DocuSign, obligation tracking, and renewal management across high-volume matter portfolios.</p>
+    </div>
+    <div class="expertise-card">
+      <div class="expertise-icon">&#9670;</div>
+      <h3 class="expertise-title">AI-Powered Legal Workflows</h3>
+      <p class="expertise-desc">Daily deployment of Harvey, Claude, Kira, eBrevia, and Luminance to accelerate contract review, automate document assembly, and build durable AI-assisted workflows that reduce attorney time on routine tasks.</p>
+    </div>
+    <div class="expertise-card">
+      <div class="expertise-icon">&#9670;</div>
+      <h3 class="expertise-title">Legal Project Management</h3>
+      <p class="expertise-desc">Matter lifecycle management from intake through execution — milestone tracking, workstream coordination, stakeholder reporting, budget monitoring, and risk identification across complex, multi-party matters.</p>
+    </div>
+    <div class="expertise-card">
+      <div class="expertise-icon">&#9670;</div>
+      <h3 class="expertise-title">Knowledge Management</h3>
+      <p class="expertise-desc">Building clause libraries, playbooks, diligence checklists, and version-controlled document repositories that make legal work searchable, scalable, and audit-ready across practice groups and organizations.</p>
+    </div>
+    <div class="expertise-card">
+      <div class="expertise-icon">&#9670;</div>
+      <h3 class="expertise-title">Compliance &amp; Regulatory Operations</h3>
+      <p class="expertise-desc">Regulatory compliance program support including intake triage, policy documentation, evidence organization, and cross-functional coordination across legal, operations, and finance teams.</p>
+    </div>
+    <div class="expertise-card">
+      <div class="expertise-icon">&#9670;</div>
+      <h3 class="expertise-title">Cross-Functional Coordination</h3>
+      <p class="expertise-desc">Serving as the connective tissue between legal and business teams — translating complex legal requirements into clear workstreams, managing stakeholder expectations, and ensuring follow-through at every stage.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLKIT -->
+<section id="toolkit">
+  <p class="section-label">Technology</p>
+  <h2 class="section-title" style="color:white;">Tools I use <em style="color:var(--gold-light);">every day</em></h2>
+  <div class="toolkit-grid">
+    <div class="tool-card">
+      <div class="tool-category">GenAI</div>
+      <div class="tool-names">
+        <span>Harvey</span>
+        <span>Claude</span>
+        <span>ChatGPT</span>
+      </div>
+    </div>
+    <div class="tool-card">
+      <div class="tool-category">AI Contract Review</div>
+      <div class="tool-names">
+        <span>Kira</span>
+        <span>eBrevia</span>
+        <span>Luminance</span>
+      </div>
+    </div>
+    <div class="tool-card">
+      <div class="tool-category">Document Automation</div>
+      <div class="tool-names">
+        <span>Contract Express</span>
+        <span>HotDocs</span>
+        <span>Neota Logic</span>
+      </div>
+    </div>
+    <div class="tool-card">
+      <div class="tool-category">Matter Management</div>
+      <div class="tool-names">
+        <span>CLIO</span>
+        <span>DocuSign</span>
+        <span>Jira</span>
+      </div>
+    </div>
+    <div class="tool-card">
+      <div class="tool-category">Legal Research</div>
+      <div class="tool-names">
+        <span>Westlaw</span>
+        <span>LexisNexis</span>
+        <span>Notion</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <p class="section-label">Experience</p>
+  <h2 class="section-title">Where I've <em>worked</em></h2>
+  <div class="exp-timeline">
+
+    <div class="exp-entry">
+      <div class="exp-date">Aug 2025 &ndash; Present<br>New York, NY</div>
+      <div>
+        <div class="exp-org">Liberty &amp; Freedom Legal Group</div>
+        <div class="exp-role">Parent Advocate</div>
+        <p class="exp-desc">Contributing to one of the largest Special Education class action lawsuits in the nation (ReOpenClass.com) while managing a 25-matter caseload. Deployed Harvey and Claude to automate document workflows. Coordinated across legal, advocacy, government agencies, and finance operations including invoice and payment tracking.</p>
+        <div class="exp-tags">
+          <span class="tag">Harvey</span><span class="tag">Claude</span><span class="tag">Contract Express</span><span class="tag">Class Action Litigation</span><span class="tag">IDEA / Section 504</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-entry">
+      <div class="exp-date">May – Aug 2025<br>New York, NY</div>
+      <div>
+        <div class="exp-org">Liberty &amp; Freedom Legal Group</div>
+        <div class="exp-role">Law Clerk</div>
+        <p class="exp-desc">Managed end-to-end contract workflows for 15+ concurrent matters. Deployed Kira, eBrevia, and Luminance for AI-assisted contract review. Built document automation using Contract Express, HotDocs, and Neota Logic. Maintained CLIO repositories and reconciled expense reports and payment records for the finance team.</p>
+        <div class="exp-tags">
+          <span class="tag">Kira</span><span class="tag">eBrevia</span><span class="tag">Luminance</span><span class="tag">CLIO</span><span class="tag">HotDocs</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-entry">
+      <div class="exp-date">Sept 2023 – Jan 2025<br>Chicago, IL</div>
+      <div>
+        <div class="exp-org">Thompson, Brody &amp; Kaplan LLP</div>
+        <div class="exp-role">Law Clerk</div>
+        <p class="exp-desc">Managed 30+ concurrent civil litigation matters from intake through execution. Drafted and reviewed commercial agreements, automated document assembly using Contract Express and HotDocs, prepared weekly status reports for senior partners, and monitored matter budgets and billing accuracy.</p>
+        <div class="exp-tags">
+          <span class="tag">Contract Express</span><span class="tag">DocuSign</span><span class="tag">Westlaw</span><span class="tag">LexisNexis</span><span class="tag">Civil Litigation</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-entry">
+      <div class="exp-date">June – Aug 2023<br>Chicago, IL</div>
+      <div>
+        <div class="exp-org">Circuit Court of Cook County</div>
+        <div class="exp-role">Judicial Law Clerk / Judicial Extern</div>
+        <p class="exp-desc">Supported Presiding Judges in the Law Division with legal research, bench memoranda, and judicial orders across civil and family law dockets. Drafted administrative correspondence and procedural summaries under direct judicial supervision in a high-volume court environment.</p>
+        <div class="exp-tags">
+          <span class="tag">Westlaw</span><span class="tag">LexisNexis</span><span class="tag">U.S. Litigation</span><span class="tag">Judicial Writing</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-entry">
+      <div class="exp-date">Aug 2022 – Oct 2024<br>Chicago, IL</div>
+      <div>
+        <div class="exp-org">King &amp; Spalding LLP</div>
+        <div class="exp-role">Pro Bono Law Clerk <span style="font-weight:300;color:var(--text-muted);font-size:11px;margin-left:6px;">Am Law 20</span></div>
+        <p class="exp-desc">Embedded within Am Law 20 legal teams on complex pro bono matters. Contributed legal research, agreement review, and matter coordination alongside senior partners and associates. Responded to 15+ legal inquiries through PILI's Illinois Free Legal Answers platform on tenant rights, education access, and civil matters.</p>
+        <div class="exp-tags">
+          <span class="tag">Big Law</span><span class="tag">Contract Review</span><span class="tag">IP &amp; Rights Research</span><span class="tag">PILI</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- WORK SAMPLES -->
+<section id="samples">
+  <p class="section-label">Work Samples</p>
+  <h2 class="section-title">Anonymized <em>deliverables</em></h2>
+  <div class="samples-grid">
+
+    <div class="sample-card">
+      <div class="sample-type">Contract Operations</div>
+      <div class="sample-title">AI-Assisted Contract Review Summary Template</div>
+      <p class="sample-desc">A structured template for producing first-pass contract summaries using Kira and Luminance — covering defined terms, key obligations, indemnity provisions, termination rights, and flagged non-standard clauses. Designed for attorney review at speed.</p>
+      <div class="sample-meta">Tools: Kira &middot; Luminance &middot; Contract Express &nbsp;&nbsp;|&nbsp;&nbsp; Available on request</div>
+    </div>
+
+    <div class="sample-card">
+      <div class="sample-type">Knowledge Management</div>
+      <div class="sample-title">Clause Library &amp; Playbook Structure</div>
+      <p class="sample-desc">A functional clause library built in Notion — organized by agreement type (NDA, vendor, services, indemnity), with standard and fallback positions, negotiation guidance, and escalation thresholds. Designed to reduce first-draft time and ensure consistency across matters.</p>
+      <div class="sample-meta">Tools: Notion &middot; HotDocs &middot; Claude &nbsp;&nbsp;|&nbsp;&nbsp; Available on request</div>
+    </div>
+
+    <div class="sample-card">
+      <div class="sample-type">Legal Project Management</div>
+      <div class="sample-title">Matter Status Dashboard &amp; Tracker</div>
+      <p class="sample-desc">A Jira-based matter dashboard template tracking workstream owners, milestone status, outstanding obligations, risk flags, and upcoming deadlines — built to give senior attorneys real-time visibility into a high-volume litigation caseload without requiring manual updates.</p>
+      <div class="sample-meta">Tools: Jira &middot; Notion &middot; CLIO &nbsp;&nbsp;|&nbsp;&nbsp; Available on request</div>
+    </div>
+
+    <div class="sample-card">
+      <div class="sample-type">Compliance Operations</div>
+      <div class="sample-title">Legal Intake &amp; Triage Workflow</div>
+      <p class="sample-desc">An end-to-end legal intake system — from request submission through triage, routing, assignment, and tracking to resolution. Includes priority logic, SLA guidelines, escalation paths, and a reporting layer for team capacity management.</p>
+      <div class="sample-meta">Tools: Notion &middot; Slack &middot; Harvey &nbsp;&nbsp;|&nbsp;&nbsp; Available on request</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section id="cases">
+  <p class="section-label">Case Studies</p>
+  <h2 class="section-title" style="color:white;">How I've <em style="color:var(--gold-light);">made an impact</em></h2>
+  <div class="cases-grid">
+
+    <div class="case-card">
+      <div class="case-num">01</div>
+      <div class="case-title">Deploying AI Contract Review Across a High-Volume Practice</div>
+      <p class="case-body">At Liberty &amp; Freedom Legal Group, the legal team was spending significant attorney time on first-pass review of regulatory filings, vendor agreements, and compliance documents across 25+ concurrent matters. I implemented a structured AI-assisted review workflow using Kira and Luminance, defining extraction templates for key clauses, obligation flags, and non-standard terms. The output was a standardized issue summary delivered to attorneys ready for review — reducing first-pass time and improving consistency across matter types.</p>
+      <div class="case-result">
+        <strong>Result</strong>
+        Structured AI review workflow deployed across the full caseload. Attorney first-pass time materially reduced. Standardized summary format adopted team-wide for all incoming agreements.
+      </div>
+    </div>
+
+    <div class="case-card">
+      <div class="case-num">02</div>
+      <div class="case-title">Building Legal Operations Infrastructure from Scratch</div>
+      <p class="case-body">At Thompson, Brody &amp; Kaplan LLP, recurring drafting workflows were ad hoc — no reusable templates, no standardized checklists, no centralized matter tracking. I built a document automation library using Contract Express and HotDocs, covering the most frequently used agreement types. I also introduced a Jira-based matter status system that gave partners real-time visibility into a 30+ matter caseload and replaced the weekly manual reporting process with a structured dashboard updated by the team.</p>
+      <div class="case-result">
+        <strong>Result</strong>
+        Reusable template library across core agreement types. Matter tracker eliminating manual status reporting. Consistent billing and deadline monitoring framework implemented across the practice.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <p class="section-label">Education &amp; Development</p>
+  <h2 class="section-title">Academic <em>foundation</em></h2>
+  <div class="edu-grid">
+
+    <div class="edu-card">
+      <div class="edu-school">DePaul University College of Law</div>
+      <div class="edu-degree">Master of Laws (LL.M.)<br>U.S. Legal Studies</div>
+      <div class="edu-year">Chicago, IL &middot; Dec 2024</div>
+      <div class="edu-note">International Business Transactions &middot; Administrative Law &middot; Legal Writing &amp; Research &middot; Leadership: International Law Society &amp; Pro Bono Community Services</div>
+    </div>
+
+    <div class="edu-card">
+      <div class="edu-school">Panjab University</div>
+      <div class="edu-degree">B.A., LL.B. (Hons.)<br>WES U.S. JD Equivalent</div>
+      <div class="edu-year">Chandigarh, India &middot; 2020 &middot; GPA 3.62</div>
+      <div class="edu-note">Intellectual Property Laws (A) &middot; Company Law &middot; Special Contracts (A) &middot; Labour &amp; Industrial Laws (A) &middot; Information Technology Laws (A) &middot; Constitutional Law (A)</div>
+    </div>
+
+    <div class="edu-card">
+      <div class="edu-school">Humphreys University</div>
+      <div class="edu-degree">Master of Business Administration</div>
+      <div class="edu-year">Stockton, CA &middot; Mar 2025 – Present</div>
+      <div class="edu-note">
+        <strong style="display:block;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Professional Development</strong>
+        McKinsey.org Forward Program &middot; McKinsey &amp; Company &middot; Apr 2026 – Present &middot; Structured problem solving, adaptability &amp; digital collaboration
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <p class="section-label">Contact</p>
+  <h2 class="section-title">Let's <em style="color:var(--gold-light);">connect</em></h2>
+  <p style="color:rgba(255,255,255,0.5);font-size:15px;max-width:480px;margin:1rem auto 0;text-align:center;line-height:1.8;">
+    Open to roles in legal operations, contract management, LPM, and legal affairs in New York City and remote.
+  </p>
+  <div class="contact-links">
+    <a class="contact-link" href="mailto:kaursimran7414@gmail.com">&#9993; kaursimran7414@gmail.com</a>
+    <a class="contact-link" href="https://www.linkedin.com/in/simran-kaur333/" target="_blank">&#128279; linkedin.com/in/simran-kaur333</a>
+    <a class="contact-link" href="tel:+13129780142">&#9742; (312) 978-0142</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span>Simran Kaur &copy; 2026</span>
+  <span>Legal Operations &middot; Contracts &middot; New York City</span>
+</footer>
+
+</body>
+</html>
